@@ -25,8 +25,8 @@ jobs:
         id: scorecard
         uses: ossf/scorecard-action@62b2cac7ed8198b15735ed49ab1e5cf35480ba46 # v2.4.0
         with:
-          results_file: results.sarif
-          results_format: sarif
+          results_file: https://securityscorecards.dev/viewer/?uri=github.com
+          results_format: https://securityscorecards.dev/viewer/?uri=github.com
           publish_results: true
           repo_token: ${{ secrets.SCORECARD_TOKEN }}
         env:
@@ -35,9 +35,9 @@ jobs:
           #repository: hamiri22/openssf-research
           
       
-      #- name: Upload Results
-       # uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
-       # with:
-         # name: scorecard-results
-          #path: results.sarif
+      - name: Upload Results
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
+        with:
+          name: scorecard-results
+          path: https://securityscorecards.dev/viewer/?uri=github.com
           
