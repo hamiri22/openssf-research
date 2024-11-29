@@ -32,7 +32,7 @@ jobs:
         env:
           contents: read
           persist-credentials: true
-          repository: ALLETE-CTS-EMU/devops_team_initiative
+          repository: hamiri22/openssf-research
           
       
       - name: Upload Results
